@@ -1,0 +1,394 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  overflow: hidden;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90px;
+  width: 100%;
+  background: rgba(147, 119, 248, 0.104);
+  border-bottom: 5px solid white;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  box-shadow: 1px 1px 30px 1px rgba(255, 255, 255, 0.611);
+  transition: 1s;
+  z-index: 10;
+  position: fixed;
+}
+header ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+  white-space: nowrap;
+  font-size: 35px;
+}
+header ul a {
+  color: white;
+  margin-right: 50px;
+  margin-left: 50px;
+  margin-top: 15px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: 1s;
+  font-size: 30px;
+  font-weight: 550;
+}
+header ul #inicioHead,
+header ul #sobreMimHead,
+header ul #habilidadesHead,
+header ul #projetosHead {
+  border-bottom: 2px solid transparent;
+}
+header ul #inicioHead:hover,
+header ul #sobreMimHead:hover,
+header ul #habilidadesHead:hover,
+header ul #projetosHead:hover {
+  width: 100%;
+  border-bottom: 2px solid white;
+  transition: 1.5s;
+}
+header #tema_escuro {
+  display: none;
+}
+header #label {
+  background-color: white;
+  height: 30px;
+  width: 65px;
+  border-radius: 30px;
+  margin-top: 22px;
+  margin-left: 93px;
+  cursor: pointer;
+  position: relative;
+}
+header label::before {
+  background-color: #000000;
+  position: absolute;
+  content: "";
+  width: 25px;
+  height: 25px;
+  border-radius: 200px;
+  margin: 3px;
+  transition: 1s;
+}
+header input:checked + #label::before {
+  transform: translateX(34px);
+  background-color: white;
+}
+
+main {
+  background: linear-gradient(270deg, rgb(35, 0, 69) 30%, rgba(0, 0, 0, 0.952) 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 100vw;
+  height: 100vh;
+  width: 101%;
+  transition: 1.6s;
+}
+main .container {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  height: 100vh;
+}
+main .container .principal {
+  display: flex;
+  height: 700px;
+  width: 100%;
+  margin-top: 80px;
+  margin-left: 50px;
+  background: transparent;
+  border-radius: 50%;
+  position: relative;
+  z-index: 1;
+  top: 4%;
+  transition: 1s;
+}
+main .container .esquerdo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  flex-direction: column;
+  min-width: 96vw;
+  border-radius: 100px;
+  transition: 1s;
+}
+main .container .esquerdo #paragrafo1,
+main .container .esquerdo #paragrafo {
+  color: #f2f2f2;
+  font-weight: 500;
+  transition: 1s;
+  font-size: 4rem;
+  margin-right: 726px;
+}
+main .container .esquerdo #paragrafo1 {
+  margin-right: 675px;
+}
+main .container .esquerdo #nome {
+  color: rgb(148, 95, 241);
+  transition: 1s;
+  font-size: 7rem;
+  margin-right: 560px;
+}
+main .container .esquerdo #photo {
+  width: 440px;
+  height: 440px;
+  box-shadow: 1px 1px 30px 1px rgba(255, 255, 255, 0.077);
+  border-radius: 500px;
+  z-index: 10;
+  left: 65.3%;
+  bottom: 21.5%;
+  position: absolute;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .container .esquerdo #animaçãoBorda {
+  width: 450px;
+  height: 450px;
+  border-radius: 500px;
+  z-index: 1;
+  left: 65%;
+  bottom: 21%;
+  position: absolute;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .container .esquerdo #animaçãoBorda::before {
+  content: "";
+  background-image: conic-gradient(rgb(148, 95, 241) 20deg, transparent 120deg);
+  width: 150%;
+  height: 150%;
+  animation: rotate 2s linear infinite;
+}
+main .container .esquerdo #photo::after {
+  content: "Animation";
+  width: 450px;
+  height: 450px;
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+main .container .esquerdo nav {
+  position: relative;
+  left: -22%;
+  top: 5%;
+  margin: 10px;
+}
+main .container .esquerdo nav img {
+  height: 50px;
+  margin-left: 10px;
+  margin-top: 5px;
+  margin-right: 5px;
+  box-shadow: 1px 1px 30px 1px rgba(255, 255, 255, 0.358);
+  border-radius: 10px;
+  border: 1px solid white;
+  background-color: rgb(255, 255, 255);
+  cursor: pointer;
+}
+main .container .esquerdo nav img:hover {
+  height: 48px;
+  opacity: 1;
+}
+main .container .esquerdo nav:hover img:not(:hover) {
+  opacity: 0.7;
+}
+main .container .esquerdo nav a {
+  text-decoration: none;
+}
+main .container .SobreMim {
+  background: linear-gradient(270deg, rgb(8, 5, 14), rgba(35, 0, 69, 0.995) 40%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-width: 100%;
+  height: 100vh;
+  transition: 1s;
+}
+main .container .SobreMim #NomeCompleto {
+  color: #f2f2f2;
+  transition: 1s;
+  margin-top: 100px;
+  padding: 0px;
+  font-size: 70px;
+  font-weight: 600;
+  width: 800px;
+}
+main .container .SobreMim #paragrafos {
+  display: flex;
+  margin-bottom: 100px;
+  padding-left: 0vh;
+}
+main .container .SobreMim #paragrafos #SobreMim {
+  color: white;
+  background: rgba(0, 0, 0, 0.6);
+  box-shadow: 0 1px 30px 0 rgba(255, 255, 255, 0.195);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  font-size: 30px;
+  font-weight: 500;
+  transition: 1s;
+  border-bottom: 5px solid white;
+  border-top: 5px solid white;
+  border-radius: 80px;
+  border-radius: 100px;
+  width: 850px;
+  padding-bottom: 2vh;
+}
+main .container .SobreMim #paragrafos #SobreMim #destaque {
+  color: rgb(148, 95, 241);
+}
+main .container .habilidades {
+  background: linear-gradient(270deg, rgb(35, 0, 69) 30%, rgba(0, 0, 0, 0.952) 100%);
+  display: flex;
+  justify-content: center;
+  padding-top: 20vh;
+  padding-left: 50vh;
+  padding-right: 51vh;
+  transition: 1s;
+}
+main .container .habilidades .skills {
+  background: rgba(0, 0, 0, 0.6);
+  box-shadow: 0 1px 30px 0 rgba(255, 255, 255, 0.195);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  color: white;
+  width: 800px;
+  height: 620px;
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-bottom: 5px solid white;
+  border-top: 5px solid white;
+  border-radius: 50px;
+  position: relative;
+  bottom: 4%;
+  transition: 1s;
+}
+main .container .habilidades .skills #html,
+main .container .habilidades .skills #css,
+main .container .habilidades .skills #js,
+main .container .habilidades .skills #ts,
+main .container .habilidades .skills #sass,
+main .container .habilidades .skills #react {
+  font-size: 30px;
+  margin: 10px;
+  margin-left: 20px;
+}
+main .container .habilidades .skills #labelHTML,
+main .container .habilidades .skills #labelCSS,
+main .container .habilidades .skills #labelJS,
+main .container .habilidades .skills #labelSASS,
+main .container .habilidades .skills #labelTS,
+main .container .habilidades .skills #labelREACT {
+  background-color: white;
+  color: #000000;
+  height: 30px;
+  width: 700px;
+  border-radius: 50px;
+  margin-left: 20px;
+  transition: 1s;
+}
+main .container .habilidades .skills #labelHTML::before,
+main .container .habilidades .skills #labelCSS::before,
+main .container .habilidades .skills #labelJS::before,
+main .container .habilidades .skills #labelSASS::before,
+main .container .habilidades .skills #labelTS::before,
+main .container .habilidades .skills #labelREACT::before {
+  position: absolute;
+  content: "";
+  height: 30px;
+  border-radius: 200px;
+  transition: 1s;
+}
+main .container .habilidades .skills #spanTODOS {
+  font-weight: 700;
+  font-size: 20px;
+  display: flex;
+  margin-left: 650px;
+}
+main .container .habilidades .skills #labelHTML::before {
+  background-color: #f6750b;
+  width: 490px;
+}
+main .container .habilidades .skills #labelCSS::before {
+  background-color: #2040f2;
+  width: 455px;
+}
+main .container .habilidades .skills #labelJS::before {
+  background-color: #eaea0f;
+  width: 245px;
+}
+main .container .habilidades .skills #labelREACT::before {
+  background-color: #0ab9ee;
+  width: 40px;
+}
+main .container .habilidades .skills #labelSASS::before {
+  background-color: #f00de8;
+  width: 350px;
+}
+main .container .habilidades .skills #labelTS::before {
+  background-color: #345ef6;
+  width: 210px;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90px;
+  width: 100%;
+  background: rgba(147, 119, 248, 0.104);
+  bottom: 0%;
+  border-top: 5px solid white;
+  box-shadow: 1px 1px 30px 1px rgba(255, 255, 255, 0.281);
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  transition: 1s;
+  z-index: 10;
+  position: fixed;
+}
+footer nav ul input {
+  display: none;
+}
+footer nav ul {
+  display: flex;
+}
+footer nav ul #refInicio,
+footer nav ul #refHabilidades,
+footer nav ul #refSobreMim {
+  background-color: rgb(255, 255, 255);
+  box-shadow: 1px 1px 30px 1px rgba(255, 255, 255, 0.281);
+  height: 30px;
+  width: 30px;
+  border-radius: 30px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+footer nav ul #refInicio:hover,
+footer nav ul #refHabilidades:hover,
+footer nav ul #refSobreMim:hover {
+  border: 2px solid rgb(148, 95, 241);
+}/*# sourceMappingURL=style.css.map */

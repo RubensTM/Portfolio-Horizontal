@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;700&display=swap"
+        rel="stylesheet">
+    <title>Portfolio</title>
+</head>
+
+<body>
+    <header>
+        <ul>
+            <a href="#inicio" id="inicioHead">Início</a>
+            <a href="#sobre-mim" id="sobreMimHead">Sobre mim</a>
+            <a href="#habilidades" id="habilidadesHead">Habilidades</a>
+            <a id="projetosHead">Projetos</a>
+        </ul>
+
+        <input type="checkbox" id="tema_escuro" onclick="tema()">
+        <label for="tema_escuro" id="label"></label>
+    </header>
+
+    <main>
+        <div id="inicio" class="container">
+            <div class="principal">
+                <section class="esquerdo">
+                    <p id="paragrafo">Olá, eu me chamo</p>
+                    <p id="nome">Rubens Paulo</p>
+                    <p id="paragrafo1">Desenvolvedor Web</p>
+
+
+                    <img id="photo" src="image.webp">
+
+                    <div id="animaçãoBorda"></div>
+
+                    <nav class="redesSociais">
+                        <a target="_blank" href="https://www.linkedin.com/in/rubens-paulo-71baa0274/">
+                            <img src="linkedin.png" alt="linkedin">
+
+                        </a>
+                        <a target="_blank" href="https://github.com/RubensTM">
+                            <img src="github.png" alt="github">
+                        </a>
+
+                        <a target="_blank
+                        " href="https://t.me/RubensTM">
+                            <img src="telegram.png" alt="telegram">
+                        </a>
+
+                        <a target="_blank" href="https://www.instagram.com/p.rubenss/">
+                            <img src="instagram.png" alt="instagram">
+                        </a>
+
+                        <a target="_blank" href="mailto:rubenstm12@gmail.com">
+                            <img src="gmail.png" alt="gmail" id="gmail">
+                        </a>
+                    </nav>
+                </section>
+
+            </div>
+
+            <section class="SobreMim" id="sobre-mim">
+
+                <p id="NomeCompleto">Rubens Paulo Oliveira de Carvalho</p>
+
+                <div id="paragrafos">
+                    <p id="SobreMim">
+                        <br> Sou um Desenvolvedor Web estudando <span id="destaque">JavaScript, HTML5, CSS3,
+                            ReactJS</span> e outras
+                        tecnologias há 6 meses.
+                        <br>Sempre procurei desafios complexos que usassem 100% de mim.
+                        <br>Foi então que descobri minha paixão pelo desenvolvimento web. Adoro criar projetos
+                        desafiadores e aprender coisas que eu nem sabia que existiam.
+                        <br>Conhecimentos sobre UX/UI.
+                    </p>
+                </div>
+            </section>
+            <section class="habilidades" id="habilidades">
+                <div class="skills">
+
+                    <p id="html">HTML</p>
+                    <label id="labelHTML" for="html"><span id="spanTODOS">70%</span></label>
+
+                    <p id="css">CSS</p>
+                    <label id="labelCSS" for="css"><span id="spanTODOS">65%</span></label>
+
+                    <p id="js">JavaScript</p>
+                    <label id="labelJS" for="js"><span id="spanTODOS">35%</span></label>
+
+                    <p id="react">React</p>
+                    <label id="labelREACT" for="react"><span id="spanTODOS">1%</span></label>
+
+                    <p id="sass">SASS</p>
+                    <label id="labelSASS" for="sass"><span id="spanTODOS">50%</span></label>
+
+                    <p id="ts">TypeScript</p>
+                    <label id="labelTS" for="ts"><span id="spanTODOS">30%</span></label>
+
+                </div>
+            </section>
+        </div>
+        <main>
+            <footer>
+                <nav class="direcaoFooter">
+                    <ul class="ulFooter">
+                        <label href="#" id="refInicio">
+                            <input type="checkbox" id="labelInicio" onclick="sla()">
+                        </label>
+                        <label href="#" id="refSobreMim">
+                            <input type="checkbox" id="labelSobreMim" onclick="sla1()">
+                        </label>
+
+                        <label href="#" id="refHabilidades">
+                            <input type="checkbox" id="labelHabilidades" onclick="sla2()">
+                        </label>
+
+
+                    </ul>
+                </nav>
+            </footer>
+            <script src="script1.js"></script>
+</body>
+
+</html>
